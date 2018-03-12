@@ -8,7 +8,6 @@ services:
 before_install:
   - cp .env.example .env
   - ./develop artisan key:generate
-  - ./develop up -d
   - ./develop composer install
 
 script:
