@@ -4,7 +4,9 @@ services:
   - docker
 
 before_install:
+  - cp .env.example .env
   - ./develop up -d
+  - ./develop composer install
 
 script:
   - ./develop phpunit
