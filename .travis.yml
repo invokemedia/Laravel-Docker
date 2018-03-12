@@ -7,8 +7,8 @@ services:
 
 before_install:
   - cp .env.example .env
-  - ./develop artisan key:generate
   - ./develop composer install
+  - ./develop artisan key:generate
 
 script:
   - ./develop phpunit
