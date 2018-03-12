@@ -1,0 +1,32 @@
+version: '2'
+services:
+  app:
+    build:
+      context: ./docker/app
+      dockerfile: Dockerfile
+    image: laravel-docker/app
+    volumes:
+     - .:/var/www/html
+    networks:
+     - app-net
+  node:
+    build:
+      context: ./docker/node
+      dockerfile: Dockerfile
+    image: laravel-docker/node
+    volumes:
+     - .:/var/www/html
+    networks:
+     - app-net
+  mysql:
+    image: mysql:5.7
+    volumes:
+     - mysqldata:/var/lib/mysql
+    networks:
+     - app-net
+  redis:
+    image: redis:alpine
+    volumes:
+     - redisdata:/data
+    networks:
+     - app-net
