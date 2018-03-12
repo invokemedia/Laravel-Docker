@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/invokemedia/Laravel-Docker.svg?branch=master)](https://travis-ci.org/invokemedia/Laravel-Docker)
+
 # Laravel Docker
 
 Laravel application "dockerized".
