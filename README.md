@@ -130,3 +130,24 @@ If you prefer using Yarn:
 ```bash
 $ ./develop yarn install
 ```
+
+## Environment Variables
+
+If you have many projects running on your machine, you might want to override
+some of the environment variables below:
+ 
+```
+# Change these if you already have something running on port 80
+APP_PORT=80
+
+# Change this if you already have something running on port 3306
+DB_PORT=3306
+
+# Set these if you need different settings for your DB
+# WARNING: If you already ran this project on your machine the previous
+# database config will be used!
+DB_ROOT_PASS=secret
+DB_NAME=homestead
+DB_USER=homestead
+DB_PASS=secret
+```
