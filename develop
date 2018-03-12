@@ -47,9 +47,10 @@ if [ $# -gt 0 ];then
     # pass-thru any extra arguments to php-unit
     elif [ "$1" == "phpunit" ]; then
         shift 1
-        $COMPOSE exec \
+        $COMPOSE run --rm $TTY \
+            -w /var/www/html \
             app \
-            sh -c "cd /var/www/html && ./vendor/bin/phpunit $@"
+            vendor/bin/phpunit "$@"
 
     # If "npm" is used, run npm
     # from our node container
