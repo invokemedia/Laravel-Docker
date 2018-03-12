@@ -23,6 +23,12 @@ $ cd Laravel-Docker
 $ cp .env.example .env
 ```
 
+### Install composer dependencies
+
+```bash
+$ ./develop composer install
+```
+
 ### Generate application key
 
 ```bash
