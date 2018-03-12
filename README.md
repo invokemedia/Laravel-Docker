@@ -6,6 +6,35 @@ Laravel application "dockerized".
 
 You will need Docker up & running on your machine. That's it!
 
+## Setup
+
+### Clone repository
+
+```bash 
+$ git clone git@github.com:invokemedia/Laravel-Docker.git
+$ cd Laravel-Docker
+```
+
+### Create environment file
+
+```bash
+$ cp .env.example .env
+```
+
+### Generate application key
+
+```bash
+$ ./develop artisan key:generate
+```
+
+## Fire it up!
+
+```bash
+$ ./develop up -d
+```
+
+You should now be able to visit your application at http://localhost.
+
 ## Stack
 
 This will create the following containers:
